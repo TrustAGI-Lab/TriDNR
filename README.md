@@ -13,6 +13,7 @@ A demo is provide in 'demo.py', which runs and compares several algorithms
 About the datasets:
 There are two networked datasets in the paper, i.e., DBLP and Citeseer-M10.
 Each dataset containts 3 files:
+	
 	1. docs.txt : title information of each node in a network, each line represents a node (paper). The first item in each line is the node ID
 
 	2. adjedges.txt : neighbor nodes of each node in a network. The first item in each line is the node ID, and the rest items are nodes that has a link to the first node. Node that if only one item in a line, it means that the node has no links to other nodes
