@@ -9,3 +9,18 @@ The code is developed in Python, based on the package gensim, and DeepWalk. All 
 	pip install -r requirements.txt
 
 A demo is provide in 'demo.py', which runs and compares several algorithms 
+
+About the datasets:
+There are two networked datasets in the paper, i.e., DBLP and Citeseer-M10.
+Each dataset containts 3 files:
+	1. docs.txt : title information of each node in a network, each line represents a node (paper). The first item in each line is the node ID
+
+	2. adjedges.txt : neighbor nodes of each node in a network. The first item in each line is the node ID, and the rest items are nodes that has a link to the first node. Node that if only one item in a line, it means that the node has no links to other nodes
+
+	3.labels: class labels of a node. Each line represents a node id and its class label
+
+The first item of each line across three files are matched. 
+
+
+Note:
+On some dataset (M10), some neighbor nodes are not appear in the files of docs.txt or labels.txt. 
