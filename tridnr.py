@@ -96,7 +96,7 @@ class TriDNR:
                 if not doctags.__contains__(key):
                     continue
 
-                index = doctags[key].index # Doc2Vec index
+                index = doctags[key].offset # Doc2Vec index
                 id = destModel.vocab[key].index # Word2Vec index
                 destModel.syn0[id] = (1-weight) * destModel.syn0[id] + weight * orignialModel.docvecs.doctag_syn0[index]
 
@@ -109,7 +109,7 @@ class TriDNR:
             for key in keys:
                 if not doctags.__contains__(key):
                     continue
-                index = doctags[key].index # Doc2Vec index
+                index = doctags[key].offset # Doc2Vec index
                 id = orignialModel.vocab[key].index # Word2Vec index
                 destModel.docvecs.doctag_syn0[index] = (1-weight) * destModel.docvecs.doctag_syn0[index] + weight * orignialModel.syn0[id]
                 destModel.docvecs.doctag_syn0_lockf[index] = orignialModel.syn0_lockf[id]
