@@ -18,7 +18,7 @@ import Evaluation
 numFea = 100
 cores = 4
 train_size = 0.2  #Percentage of training samples
-random_state = 1
+random_state = 2
 dm = 0
 passes = 20
 
@@ -84,7 +84,7 @@ acc, macro_f1, micro_f1 = Evaluation.evaluation(train_vecs, test_vecs, train_y, 
 print("##################")
 
 ### Our method, TriDNR
-train_size=0.3
+#train_size=0.3
 from tridnr import TriDNR
 tridnr_model = TriDNR(directory, size=numFea, dm=0, textweight=.8, train_size=train_size, seed=random_state, passes=10)
 Evaluation.evaluationEmbedModelFromTrainTest(tridnr_model.model, train, test, classifierStr='SVM')
