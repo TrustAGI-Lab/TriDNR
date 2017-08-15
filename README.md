@@ -24,4 +24,5 @@ The first item of each line across three files are matched.
 
 
 Note:
-On some dataset (M10), some neighbor nodes do not appear in the files of docs.txt or labels.txt. 
+1. On some dataset (M10), some neighbor nodes do not appear in the files of docs.txt or labels.txt. 
+2. For the fair of comparison, I would sugget shuffling the dataset before training different methods. 
