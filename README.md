@@ -1,5 +1,5 @@
 # TriDNR
-Tri-Party Deep Network Representation
+Tri-Party Deep Network Representation, published in IJCAI 2016: 1895-1901.
 
 The codes implement the TriDNR algorithm, which learns an continuous representation for each node in a network. TriDNR uses information from three perspectives, including node structure, node content, and node labels (if available), to jointly learn optimal node representation
 
